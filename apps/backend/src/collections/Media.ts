@@ -1,0 +1,52 @@
+import { CollectionConfig } from "payload/types";
+
+export const Media: CollectionConfig = {
+  slug: "media",
+  admin: {
+    useAsTitle: "filename",
+  },
+  access: {
+    read: () => true,
+    create: ({ req: { user } }) => Boolean(user),
+    update: ({ req: { user } }) => Boolean(user),
+    delete: ({ req: { user } }) => Boolean(user),
+  },
+  upload: {
+    staticURL: "/media",
+    staticDir: "uploads",
+    imageSizes: [
+      {
+        name: "thumbnail",
+        width: 400,
+        height: 300,
+        position: "centre",
+      },
+      {
+        name: "card",
+        width: 768,
+        height: 432,
+        position: "centre",
+      },
+      {
+        name: "hero",
+        width: 1920,
+        height: 1080,
+        position: "centre",
+      },
+    ],
+    adminThumbnail: "thumbnail",
+    mimeTypes: ["image/*", "application/pdf"],
+  },
+  fields: [
+    {
+      name: "alt",
+      type: "text",
+      localized: true,
+    },
+    {
+      name: "caption",
+      type: "text",
+      localized: true,
+    },
+  ],
+};

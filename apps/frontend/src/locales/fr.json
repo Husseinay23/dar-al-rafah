@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "courses": "Cours",
+    "news": "Actualités",
+    "research": "Recherche",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "published": "Publié",
+    "draft": "Brouillon"
+  },
+  "home": {
+    "hero": {
+      "title": "Dar Al Rafah pour les Études et la Recherche",
+      "subtitle": "Plateforme éducative spécialisée en technologie et intelligence artificielle",
+      "description": "Nous proposons des cours de haute qualité et des recherches avancées dans les domaines de la technologie moderne en arabe"
+    },
+    "latestCourses": "Derniers Cours",
+    "latestNews": "Dernières Actualités",
+    "latestResearch": "Dernières Recherches"
+  },
+  "courses": {
+    "title": "Cours de Formation",
+    "level": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "duration": "Durée",
+    "lessons": "Leçons",
+    "topics": "Sujets",
+    "enroll": "S'inscrire",
+    "viewCourse": "Voir le Cours",
+    "noCourses": "Aucun cours disponible pour le moment",
+    "noCoursesDescription": "Essayez de changer les filtres ou de rechercher autre chose"
+  },
+  "news": {
+    "title": "Actualités",
+    "author": "Auteur",
+    "date": "Date",
+    "category": "Catégorie",
+    "readMore": "Lire la suite",
+    "noNews": "Aucune actualité disponible pour le moment",
+    "noNewsDescription": "Aucune actualité disponible pour le moment"
+  },
+  "research": {
+    "title": "Recherche",
+    "authors": "Auteurs",
+    "year": "Année",
+    "abstract": "Résumé",
+    "download": "Télécharger l'Article",
+    "viewPaper": "Voir l'Article",
+    "noResearch": "Aucune recherche disponible pour le moment",
+    "noResearchDescription": "Aucune recherche disponible pour le moment"
+  },
+  "about": {
+    "title": "À propos de nous",
+    "mission": "Notre Mission",
+    "vision": "Notre Vision",
+    "values": "Nos Valeurs",
+    "hero": {
+      "title": "À propos de Dar Al Rafah",
+      "subtitle": "Plateforme leader en éducation technologique et recherche en arabe"
+    },
+    "missionTitle": "Notre Mission",
+    "missionText": "Nous visons à fournir un contenu éducatif de haute qualité en arabe et à soutenir la recherche scientifique et l'innovation technologique, en construisant une communauté scientifique forte et interconnectée.",
+    "visionTitle": "Notre Vision",
+    "visionText": "Nous aspirons à être la plateforme leader en éducation technologique en arabe et à contribuer à la construction d'une communauté scientifique forte capable de concurrence mondiale.",
+    "valuesTitle": "Nos Valeurs",
+    "valuesSubtitle": "Les principes qui guident notre travail et notre engagement envers l'excellence",
+    "value1": {
+      "title": "Qualité",
+      "description": "Nous nous engageons à fournir le contenu éducatif et la recherche de la plus haute qualité"
+    },
+    "value2": {
+      "title": "Innovation",
+      "description": "Nous recherchons constamment de nouvelles façons innovantes de livrer la connaissance et l'apprentissage"
+    },
+    "value3": {
+      "title": "Communauté",
+      "description": "Nous croyons en la puissance de la communauté et de l'apprentissage collaboratif"
+    },
+    "stats": {
+      "title": "Nos Réalisations",
+      "subtitle": "Des chiffres qui reflètent notre impact et notre succès",
+      "courses": "Cours",
+      "students": "Étudiants",
+      "research": "Articles de Recherche",
+      "satisfaction": "Taux de Satisfaction"
+    },
+    "goals": {
+      "title": "Nos Objectifs",
+      "goal1": "Développer un contenu éducatif de haute qualité en arabe",
+      "goal2": "Soutenir la recherche scientifique et l'innovation technologique",
+      "goal3": "Construire une communauté scientifique forte et interconnectée",
+      "goal4": "Fournir des opportunités d'apprentissage pour tous, indépendamment du contexte"
+    },
+    "vision": {
+      "title": "Notre Vision pour l'Avenir",
+      "description": "Nous aspirons à être la plateforme leader en éducation technologique en arabe et à contribuer à la construction d'une communauté scientifique forte capable de concurrence mondiale."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "success": "Votre message a été envoyé avec succès",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message",
+    "hero": {
+      "title": "Entrer en Contact",
+      "subtitle": "Nous sommes là pour vous aider et répondre à toutes vos questions"
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "namePlaceholder": "Entrez votre nom",
+      "emailPlaceholder": "Entrez votre email",
+      "messagePlaceholder": "Entrez votre message",
+      "sending": "Envoi en cours...",
+      "successTitle": "Message Envoyé !",
+      "successMessage": "Merci pour votre message. Nous vous répondrons bientôt.",
+      "sendAnother": "Envoyer un Autre Message"
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "description": "Contactez-nous par l'un des canaux suivants",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "address1": "Beyrouth, Liban",
+      "address2": "Quartier Hamra"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "q1": "Comment puis-je m'inscrire aux cours ?",
+      "a1": "Vous pouvez parcourir nos cours et vous inscrire directement via la plateforme.",
+      "q2": "Les cours sont-ils gratuits ?",
+      "a2": "Nous proposons des cours gratuits et payants. Vérifiez les détails du cours pour les prix.",
+      "q3": "Comment puis-je accéder aux articles de recherche ?",
+      "a3": "Tous les articles de recherche sont disponibles au téléchargement dans la section Recherche."
+    }
+  },
+  "footer": {
+    "description": "Plateforme éducative spécialisée en technologie et intelligence artificielle",
+    "quickLinks": "Liens Rapides",
+    "contact": "Contactez-nous",
+    "rights": "Tous droits réservés"
+  }
+}
