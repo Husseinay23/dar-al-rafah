@@ -1,305 +1,357 @@
-# دار الرفاه للدراسات والأبحاث (Dar Al Rafah)
+# 🎓 Dar Al Rafah - Educational Platform
 
-منصة تعليمية متخصصة في التكنولوجيا والذكاء الاصطناعي باللغة العربية مع دعم اللغات الإنجليزية والفرنسية.
+> A modern, multilingual educational platform for technology and AI studies, built with React, TypeScript, and Express.js.
 
-## 🚀 نظرة عامة
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-هذا المشروع عبارة عن منصة تعليمية شاملة تتكون من:
+## 🌟 Features
 
-- **Backend**: Payload CMS مع دعم الترجمة الكامل (AR/EN/FR)
-- **Frontend**: React + TypeScript + Tailwind CSS مع دعم RTL
-- **قاعدة البيانات**: PostgreSQL
-- **الميزات**: نظام إدارة المحتوى، دورات تدريبية، أخبار، أبحاث علمية
+### ✅ **Completed Features**
 
-## 📁 هيكل المشروع
+#### **🌍 Internationalization**
+
+- **3 Languages**: Arabic (RTL), English (LTR), French (LTR)
+- **Complete Translations**: All pages fully translated
+- **Language Switching**: Smooth transitions with proper RTL/LTR handling
+- **Font Management**: Arabic fonts (Tajawal/Cairo) vs Latin fonts (Inter)
+- **Layout Stability**: Navigation and UI elements don't flip when switching languages
+
+#### **🎨 Modern UI/UX**
+
+- **shadcn/ui Components**: Professional, accessible components
+- **Responsive Design**: Mobile-first approach with perfect breakpoints
+- **Light/Dark Mode**: Smooth theme transitions
+- **Creative Navigation**: Header with icons, dropdowns, and mobile menu
+- **Professional Color Scheme**: Blue palette with proper contrast
+- **Bootstrap Icons**: Consistent iconography throughout
+
+#### **📱 Pages & Content**
+
+- **Home Page**: Hero section with blue backdrop, latest content showcase
+- **Courses Page**: Grid layout with filtering and search
+- **News Page**: Article layout with category filtering
+- **Research Page**: Academic paper display with topic filtering
+- **About Page**: Mission, vision, values, and statistics
+- **Contact Page**: Contact form with information and FAQ
+
+#### **🔧 Technical Stack**
+
+- **Frontend**: React 18 + TypeScript + Vite + Tailwind CSS
+- **Backend**: Express.js + Node.js
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Icons**: Bootstrap Icons
+- **State Management**: React Hooks
+- **Routing**: React Router v6
+- **Internationalization**: react-i18next
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/dar-al-rafah.git
+cd dar-al-rafah
+```
+
+2. **Install dependencies**
+
+```bash
+# Install root dependencies
+npm install
+
+# Install backend dependencies
+cd apps/backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+```
+
+3. **Environment Setup**
+
+```bash
+# Backend environment
+cp apps/backend/env.example apps/backend/.env
+# Edit apps/backend/.env with your configuration
+
+# Frontend environment
+cp apps/frontend/env.example apps/frontend/.env
+# Edit apps/frontend/.env with your configuration
+```
+
+4. **Run the development servers**
+
+```bash
+# Terminal 1 - Backend (Port 4000)
+cd apps/backend
+npm run dev
+
+# Terminal 2 - Frontend (Port 5173)
+cd apps/frontend
+npm run dev
+```
+
+5. **Access the application**
+
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:4000/api
+
+## 📁 Project Structure
 
 ```
 dar-al-rafah/
 ├── apps/
-│   ├── backend/          # Payload CMS Backend
-│   └── frontend/         # React Frontend
-├── package.json          # Root package.json
+│   ├── backend/                 # Express.js API server
+│   │   ├── src/
+│   │   │   ├── collections/     # Payload CMS collections
+│   │   │   ├── server.ts        # Main server file
+│   │   │   └── seed.ts          # Database seeding
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   │
+│   └── frontend/                 # React frontend
+│       ├── src/
+│       │   ├── components/      # Reusable components
+│       │   ├── pages/           # Page components
+│       │   ├── hooks/           # Custom React hooks
+│       │   ├── locales/         # Translation files
+│       │   ├── services/        # API services
+│       │   └── types/            # TypeScript types
+│       ├── public/
+│       ├── package.json
+│       └── vite.config.ts
+│
+├── package.json                 # Root package.json
 └── README.md
 ```
 
-## 🛠️ التقنيات المستخدمة
+## 🌍 Internationalization
 
-### Backend
+The platform supports three languages with proper RTL/LTR handling:
 
-- **Payload CMS** - نظام إدارة المحتوى
-- **Node.js + Express** - خادم الويب
-- **PostgreSQL** - قاعدة البيانات
-- **TypeScript** - لغة البرمجة
-- **Sharp** - معالجة الصور
+### **Arabic (RTL)**
 
-### Frontend
+- Font: Tajawal, Cairo
+- Direction: Right-to-left
+- Default language
 
-- **React 18** - مكتبة واجهة المستخدم
-- **TypeScript** - لغة البرمجة
-- **Vite** - أداة البناء
-- **Tailwind CSS** - إطار عمل CSS
-- **React Router** - التوجيه
-- **React i18next** - الترجمة
-- **Lucide React** - الأيقونات
+### **English (LTR)**
 
-## 🚀 التثبيت والتشغيل
+- Font: Inter
+- Direction: Left-to-right
 
-### المتطلبات الأساسية
+### **French (LTR)**
 
-- Node.js 18+
-- PostgreSQL 13+
-- npm أو pnpm
+- Font: Inter
+- Direction: Left-to-right
 
-### 1. استنساخ المشروع
+### **Translation Files**
+
+- `apps/frontend/src/locales/ar.json` - Arabic translations
+- `apps/frontend/src/locales/en.json` - English translations
+- `apps/frontend/src/locales/fr.json` - French translations
+
+## 🎨 Design System
+
+### **Color Palette**
+
+- **Primary**: Blue (#3B82F6)
+- **Secondary**: Gray tones
+- **Accent**: Complementary colors
+- **Success**: Green
+- **Warning**: Yellow
+- **Error**: Red
+
+### **Typography**
+
+- **Arabic**: Tajawal, Cairo (Google Fonts)
+- **Latin**: Inter (Google Fonts)
+- **Monospace**: JetBrains Mono
+
+### **Components**
+
+- Built with shadcn/ui
+- Fully accessible (WCAG 2.1)
+- Responsive design
+- Dark/Light mode support
+
+## 📊 Current Content
+
+### **Mock Data Included**
+
+- **5 Courses**: AI, Cybersecurity, App Development, Big Data, VR
+- **4 News Articles**: Platform launch, AI news, cybersecurity updates
+- **4 Research Papers**: Academic papers with authors and abstracts
+- **6 Topics**: AI, Machine Learning, Cybersecurity, Big Data, VR, App Development
+
+### **Content Features**
+
+- High-quality Unsplash images
+- Proper categorization
+- Search and filtering
+- Responsive layouts
+
+## 🔮 Future Roadmap
+
+### **Phase 1: Backend Realization (2-3 weeks)**
+
+- [ ] **Real Database Integration**
+  - PostgreSQL setup
+  - Payload CMS integration
+  - Data migration from mock to real
+- [ ] **Authentication System**
+  - User registration/login
+  - JWT token management
+  - Protected routes
+
+### **Phase 2: Core Features (3-4 weeks)**
+
+- [ ] **User Dashboard**
+  - Personal profile management
+  - Course enrollment system
+  - Learning progress tracking
+- [ ] **Content Management**
+  - Admin panel setup
+  - Content creation tools
+  - Media management system
+
+### **Phase 3: Advanced Features (4-6 weeks)**
+
+- [ ] **Interactive Learning**
+  - Video integration (YouTube/Vimeo)
+  - Quizzes and assessments
+  - Progress analytics
+- [ ] **Community Features**
+  - Discussion forums
+  - User profiles
+  - Social interactions
+
+### **Phase 4: Business Features (6-8 weeks)**
+
+- [ ] **E-commerce Integration**
+  - Payment processing (Stripe/PayPal)
+  - Course marketplace
+  - Subscription models
+- [ ] **Analytics & Reporting**
+  - User analytics
+  - Content performance metrics
+  - Business intelligence
+
+### **Phase 5: Innovation (8+ weeks)**
+
+- [ ] **AI-Powered Features**
+  - Personalized learning paths
+  - Automated content generation
+  - Smart search with AI
+  - Predictive analytics
+- [ ] **Advanced Learning Tools**
+  - Virtual Reality experiences
+  - Voice recognition (Arabic)
+  - Progressive Web App
+  - Offline learning capabilities
+
+## 🛠️ Development
+
+### **Scripts**
 
 ```bash
-git clone <repository-url>
-cd dar-al-rafah
-```
+# Root level
+npm run install:all    # Install all dependencies
+npm run dev:all        # Run both frontend and backend
 
-### 2. تثبيت التبعيات
-
-```bash
-# تثبيت تبعيات المشروع الرئيسي
-npm install
-
-# تثبيت تبعيات جميع التطبيقات
-npm run install:all
-```
-
-### 3. إعداد قاعدة البيانات
-
-```bash
-# إنشاء قاعدة بيانات PostgreSQL
-createdb dar_al_rafah
-
-# أو باستخدام psql
-psql -c "CREATE DATABASE dar_al_rafah;"
-```
-
-### 4. إعداد متغيرات البيئة
-
-#### Backend (.env)
-
-```bash
+# Backend
 cd apps/backend
-cp env.example .env
-```
+npm run dev           # Start development server
+npm run build         # Build for production
 
-قم بتعديل ملف `.env`:
-
-```env
-DATABASE_URI=postgresql://username:password@localhost:5432/dar_al_rafah
-PAYLOAD_SECRET=your-secret-key-here
-PAYLOAD_PUBLIC_FRONTEND_URL=http://localhost:5173
-PORT=4000
-NODE_ENV=development
-```
-
-#### Frontend (.env)
-
-```bash
+# Frontend
 cd apps/frontend
-cp env.example .env
+npm run dev           # Start development server
+npm run build         # Build for production
+npm run preview       # Preview production build
 ```
 
-قم بتعديل ملف `.env`:
+### **Code Quality**
 
-```env
-VITE_API_URL=http://localhost:4000/api
-```
+- **TypeScript**: Full type safety
+- **ESLint**: Code linting
+- **Prettier**: Code formatting
+- **Git Hooks**: Pre-commit checks
 
-### 5. تشغيل المشروع
+### **Testing**
 
-#### تشغيل جميع التطبيقات
+- Unit tests (planned)
+- Integration tests (planned)
+- E2E tests (planned)
 
-```bash
-npm run dev
-```
+## 🚀 Deployment
 
-#### تشغيل التطبيقات منفصلة
+### **Development**
 
-**Backend:**
+- Local development with hot reload
+- Mock API for frontend development
+- Environment-based configuration
 
-```bash
-npm run dev:backend
-```
+### **Production (Planned)**
 
-**Frontend:**
+- Docker containerization
+- CI/CD pipelines
+- Cloud deployment (AWS/Azure/GCP)
+- Database backups
+- Monitoring & logging
 
-```bash
-npm run dev:frontend
-```
+## 🤝 Contributing
 
-### 6. إنشاء المستخدم الأول
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-1. افتح المتصفح وانتقل إلى: `http://localhost:4000/admin`
-2. سجل حساب جديد للمدير
-3. استخدم هذا الحساب لإدارة المحتوى
+### **Development Guidelines**
 
-### 7. إضافة البيانات التجريبية
+- Follow TypeScript best practices
+- Use conventional commit messages
+- Write tests for new features
+- Update documentation
 
-```bash
-npm run seed
-```
+## 📄 License
 
-## 📊 البيانات التجريبية
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-يحتوي المشروع على بيانات تجريبية شاملة تشمل:
+## 👥 Team
 
-- **6 مواضيع** (الذكاء الاصطناعي، التعلم الآلي، البيانات الضخمة، إلخ)
-- **2 دورة تدريبية** مع دروس متعددة
-- **2 مقال إخباري**
-- **2 بحث علمي**
-- **محتوى مترجم** بالعربية والإنجليزية والفرنسية
+- **Frontend Development**: React, TypeScript, Tailwind CSS
+- **Backend Development**: Express.js, Node.js
+- **UI/UX Design**: shadcn/ui, Bootstrap Icons
+- **Internationalization**: react-i18next
 
-## 🌐 الوصول للتطبيقات
+## 📞 Contact
 
-- **Frontend**: http://localhost:5173
-- **Backend Admin**: http://localhost:4000/admin
-- **API**: http://localhost:4000/api
+- **Email**: info@daralrafah.com
+- **Phone**: +961 70 123 456
+- **Address**: Beirut, Lebanon - Hamra District
 
-## 🎨 الميزات الرئيسية
+## 🙏 Acknowledgments
 
-### دعم الترجمة الكامل
-
-- العربية (الافتراضية) مع دعم RTL
-- الإنجليزية
-- الفرنسية
-- تبديل تلقائي للاتجاه (RTL/LTR)
-
-### الوضع المظلم والفاتح
-
-- تبديل سهل بين الأوضاع
-- حفظ التفضيلات محلياً
-
-### واجهة مستخدم متجاوبة
-
-- تصميم متجاوب لجميع الأجهزة
-- دعم كامل للعربية مع RTL
-- خطوط عربية جميلة (Tajawal, Cairo)
-
-### نظام إدارة المحتوى
-
-- إدارة الدورات التدريبية
-- إدارة الأخبار والمقالات
-- إدارة الأبحاث العلمية
-- رفع الملفات (صور، PDFs)
-
-## 📱 الصفحات المتاحة
-
-- **الرئيسية** (`/`) - عرض أحدث المحتوى
-- **الدورات** (`/courses`) - قائمة وتفاصيل الدورات
-- **الأخبار** (`/news`) - المقالات الإخبارية
-- **الأبحاث** (`/research`) - الأبحاث العلمية
-- **من نحن** (`/about`) - معلومات عن المنصة
-- **اتصل بنا** (`/contact`) - نموذج التواصل
-
-## 🔧 الأوامر المتاحة
-
-```bash
-# التطوير
-npm run dev                 # تشغيل جميع التطبيقات
-npm run dev:backend         # تشغيل Backend فقط
-npm run dev:frontend        # تشغيل Frontend فقط
-
-# البناء
-npm run build               # بناء جميع التطبيقات
-npm run build:backend       # بناء Backend فقط
-npm run build:frontend      # بناء Frontend فقط
-
-# الإنتاج
-npm run start               # تشغيل جميع التطبيقات (الإنتاج)
-npm run start:backend       # تشغيل Backend (الإنتاج)
-npm run start:frontend      # تشغيل Frontend (الإنتاج)
-
-# البيانات
-npm run seed                # إضافة البيانات التجريبية
-```
-
-## 🗄️ هيكل قاعدة البيانات
-
-### المجموعات (Collections)
-
-1. **Users** - المستخدمون والصلاحيات
-2. **Topics** - المواضيع والتصنيفات
-3. **Media** - الملفات والصور
-4. **Courses** - الدورات التدريبية
-5. **Lessons** - دروس الدورات
-6. **News** - المقالات الإخبارية
-7. **Papers** - الأبحاث العلمية
-
-### الترجمة
-
-جميع النصوص قابلة للترجمة وتدعم:
-
-- العربية (ar) - الافتراضية
-- الإنجليزية (en)
-- الفرنسية (fr)
-
-## 🎯 الاستخدام
-
-### إضافة محتوى جديد
-
-1. سجل دخول إلى لوحة الإدارة: `http://localhost:4000/admin`
-2. اختر المجموعة المطلوبة (Courses, News, Papers, etc.)
-3. أضف المحتوى باللغة العربية
-4. أضف الترجمات للغات الأخرى
-5. انشر المحتوى
-
-### تخصيص التصميم
-
-- **الألوان**: عدّل ملف `tailwind.config.js`
-- **الخطوط**: عدّل ملف `index.html`
-- **المكونات**: عدّل ملفات في `src/components/`
-
-## 🐛 استكشاف الأخطاء
-
-### مشاكل شائعة
-
-1. **خطأ في الاتصال بقاعدة البيانات**
-
-   - تأكد من تشغيل PostgreSQL
-   - تحقق من صحة `DATABASE_URI`
-
-2. **خطأ CORS**
-
-   - تأكد من صحة `PAYLOAD_PUBLIC_FRONTEND_URL`
-
-3. **مشاكل في الترجمة**
-   - تأكد من تحديث اللغة في المتصفح
-   - امسح cache المتصفح
-
-### سجلات الأخطاء
-
-```bash
-# Backend logs
-cd apps/backend
-npm run dev
-
-# Frontend logs
-cd apps/frontend
-npm run dev
-```
-
-## 🤝 المساهمة
-
-1. Fork المشروع
-2. أنشئ فرع للميزة الجديدة
-3. اعمل التغييرات
-4. أرسل Pull Request
-
-## 📄 الترخيص
-
-هذا المشروع مرخص تحت رخصة MIT.
-
-## 📞 الدعم
-
-للحصول على الدعم:
-
-- البريد الإلكتروني: info@daralrafah.com
-- الهاتف: +966 50 123 4567
+- [React](https://reactjs.org/) - Frontend framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [shadcn/ui](https://ui.shadcn.com/) - Component library
+- [Bootstrap Icons](https://icons.getbootstrap.com/) - Icon library
+- [Unsplash](https://unsplash.com/) - High-quality images
 
 ---
 
-**تم تطويره بـ ❤️ لخدمة المجتمع العربي في مجال التكنولوجيا**
+**Built with ❤️ for the Arabic-speaking tech community**
